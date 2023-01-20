@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CARLA Dashboard</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/dash.css' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="wrapper3">
+            <p id="speed" class="speed">{{ speed }}</p>
+            <p></p>
+            <div class="steering-div">
+                <img id = "steering" class="steering" src="https://cdn.onlinewebfonts.com/svg/img_10415.png">
+            </div>
+        </div>
+        <div class="wrapper3">
+            <p class="speed-unit">KPH</p>
+            <p></p>
+            <p id="time" class="time">{{ time }}</p>
+            
+        </div>
+        <div class="divider"></div>
+        <div class="lane-detection">
+            <div class="wrapper3">
+
+                <div id ="right" class="warning">
+                    <img class="arrows" src="{% static 'img/right.png' %}">
+                    <p style="color: red;">Turn Right</p>
+                </div>
+                <img id ="vehicle_img" class="user-vehicle" src="{% static 'img/tesla_model3.png' %}">
+                <div id="left" class="warning">
+                    <img class="arrows" src="{% static 'img/left.png' %}">
+                    <p style="color: red;">Turn Left</p>
+                </div>
+            </div>            
+        </div>
+        <script src="{% static 'js/jquery-3.6.3.min.js' %}"></script>
+        <script src="{% static 'js/dash.js' %}"></script>
+
+    </body>
+</html>
